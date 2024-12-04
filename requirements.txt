@@ -1,0 +1,6 @@
+streamlit
+PIL
+requests
+re
+unidecode
+
