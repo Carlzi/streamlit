@@ -107,19 +107,17 @@ if st.button("Process Wine"):
                             rating = wine_info.get("rating", "Unknown Rating")
                             distance = wine_info.get("distance", "Unknown Distance")
 
-                            # Display each wine recommendation
-                            st.markdown(f"""
-                            ### 🍇 {i}. {winery.capitalize()} - {cuvee.capitalize() if cuvee else "N/A"}
-                            - **🍷 Type**: {type_of_wine.capitalize()}
-                            - **📅 Vintage**: {vintage}
-                            - **🌍 Region**: {region.capitalize()}
-                            - **🏷️ Appellation**: {appellation.capitalize()}
-                            - **🍃 Cepage**: {cepage.capitalize()}
-                            - **🥂 Alcohol**: {f"{alcohol:.1%}" if alcohol else "N/A"}
-                            - **💲 Price**: {price_usd}$
-                            - **⭐ Rating**: {rating}/100
-                            """)
-
+                            with st.expander(f"🍇 {i}. {winery.capitalize()} - {cuvee.capitalize() if cuvee else 'N/A'}"):
+                                st.markdown(f"""
+                                - **🍷 Type**: {type_of_wine.capitalize()}
+                                - **📅 Vintage**: {vintage}
+                                - **🌍 Region**: {region.capitalize()}
+                                - **🏷️ Appellation**: {appellation.capitalize()}
+                                - **🍃 Cepage**: {cepage.capitalize()}
+                                - **🥂 Alcohol**: {f"{alcohol:.1%}" if alcohol else "N/A"}
+                                - **💲 Price**: {price_usd}$
+                                - **⭐ Rating**: {rating}/100
+                                """)
                     else:
                         st.error("No recommendations found. Please try again.")
             else:
