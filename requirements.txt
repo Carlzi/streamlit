@@ -1,6 +1,5 @@
 streamlit
-PIL
+pillow
 requests
-re
 unidecode
-
+protobuf==3.20.3
