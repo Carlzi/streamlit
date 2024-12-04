@@ -12,7 +12,7 @@ api_path = 'https://wineadvisor-688101927459.europe-west1.run.app'
 st.set_page_config(page_title="Wine Advisor", page_icon="🍷", layout="centered")
 
 # Display the logo
-logo = Image.open("app/wine_advisor_logo.jpg")
+logo = Image.open("wine_advisor_logo.jpg")
 st.image(logo, use_container_width=True)
 
 # title and description
